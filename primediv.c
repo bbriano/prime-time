@@ -16,8 +16,10 @@ int main(int argc, char *argv[]) {
     int *primes = malloc(sizeof(int) * N);
     int *top = primes;
     int *divisor;
-    int n = 2;
+    int n = 3;
 
+    *top++ = 2;
+    printf("2 ");
     while (top < primes + N) {
         sqrt_n = sqrt(n);
         isprime = 1;
@@ -31,7 +33,7 @@ int main(int argc, char *argv[]) {
             *top++ = n;
             printf("%d ", n);
         }
-        n++;
+        n += 2;
     }
     printf("\n");
 
